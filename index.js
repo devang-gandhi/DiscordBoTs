@@ -11,7 +11,7 @@ const token = process.env.TOKEN;
 const LOAD_SLASH = process.argv[2] == "load"
 
 const client_id = '950801883549814854'
-const guild_id = '950798888376365136'
+const guild_id = '933374755497734154'
 
 const client = new Discord.Client({
     intents : [
@@ -55,7 +55,7 @@ if(LOAD_SLASH){
 else{
     client.on("ready", () => {
         console.log(`Log in as ${client.user.tag}`);
-
+        client.user.setStatus('idle');
     })
 
     client.on("interactionCreate", (interaction) => {
